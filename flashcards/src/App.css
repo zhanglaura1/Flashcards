@@ -5,38 +5,87 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fdf6e3; /* Warm, readable background */
+  color: #333;
+  height: 100%;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App {
+  text-align: center;
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.header h1 {
+  font-family: 'Georgia', serif;
+  font-size: 2.5rem;
+  color: #2e4053;
+}
+
+.header h3 {
+  font-weight: normal;
+  color: #5c5c5c;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
 }
 
 .card {
-  padding: 2em;
+  font-family: 'Georgia', serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  height: 300px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  background-color: tan;
+  border: 3px solid saddlebrown;
+  border-radius: 5px;
+  /*
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  backface-visibility: hidden;
+  */
 }
 
-.read-the-docs {
-  color: #888;
+.card:hover {
+  background-color: wheat;
+  color: #2e4053;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
+
+/*
+.card:active {
+  transform: rotateX(180deg);
+}
+*/
+
+button {
+  background-color: #2e86ab;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #145374;
+  transform: scale(1.05);
+}
+
+
+
+
