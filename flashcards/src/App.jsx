@@ -21,13 +21,21 @@ const App = () => {
   return (
     <div className="App">
       <div className="header">
+        <img src='https://t3.ftcdn.net/jpg/02/39/18/98/360_F_239189802_HRC5bhaYW1rUqZIWpnK5Dba66Rp5zF97.jpg'/>
         <h1>Pasta or Composer?</h1>
         <h3>How well do you know your pastas and composers?</h3>
         <h3>Number of cards: 20</h3>
       </div>
-      <div className='container'>
-        <div className='card' onClick={updateSide}>
-          <h2>{card_set[index][side]}</h2>
+      <div className="container">
+        <div className={`card ${side === 1 ? 'flipped' : ''}`} onClick={updateSide}>
+          <div className="card-inner">
+            <div className="card-front">
+              <h2>{card_set[index][0]}</h2>
+            </div>
+            <div className="card-back">
+              <h2>{card_set[index][1]}</h2>
+            </div>
+          </div>
         </div>
         <button onClick={newCard}>&rarr;</button>
       </div>
