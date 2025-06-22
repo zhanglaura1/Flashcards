@@ -6,6 +6,9 @@ const App = () => {
     ['Mazzochi','Composer'], ['Mostaccioli','Pasta'], ['Pennoni','Pasta'], ['Rampollini','Composer'], ['Rota','Composer'], ['Sacchettoni','Pasta'], ['Sagnarelli','Pasta'], ['Spontini','Composer'], ['Strozzi','Composer'], ['Tartini','Composer'], ['Veracini','Composer']];
   const [side, flipSide] = useState(0);
   const [index, setIndex] = useState(0);
+  const [guess, setGuess] = useState("");
+  const [correct_guess, setCorrectGuess] = useState("")
+
   const updateSide = () => {
     if (side == 0) {
       flipSide(1);
@@ -13,9 +16,19 @@ const App = () => {
       flipSide(0);
     }
   }
+
   const newCard = () => {
     setIndex(Math.floor(Math.random() * (19 - 0 + 1)));
     flipSide(0);
+    setGuess("");
+  }
+
+  const onCheckAnswer = () => {
+    if (card_set[index][1] != guess) {
+      setCorrectGuess('wrong');
+    } else {
+      setCorrectGuess('correct');
+    }
   }
 
   return (
@@ -37,6 +50,19 @@ const App = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="footer">
+        <h3>Guess the answer here: </h3>
+        <form onSubmit={onCheckAnswer}>
+          <input
+            type="text"
+            placeholder=""
+            value={guess}
+            onChange={(e) => setGuess(e.target.value)}
+            className={correct_guess}
+          />
+        </form>
+        <button onClick={onCheckAnswer}>Submit Guess</button>
         <button onClick={newCard}>&rarr;</button>
       </div>
     </div>

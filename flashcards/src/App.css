@@ -106,3 +106,15 @@ button:hover {
   transform: scale(1.05);
 }
 
+input {
+  margin-bottom: 30px;
+  padding: 5px 10px;
+}
+
+.wrong {
+  border: 5px solid red;
+}
+
+.correct {
+  border: 5px solid green;
+}
