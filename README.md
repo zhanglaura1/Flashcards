@@ -47,7 +47,7 @@ Here's a walkthrough of implemented required features:
   <a href="https://www.loom.com/share/42492c2c55774808ba2faf890fd820f5">
   </a>
   <a href="https://www.loom.com/share/42492c2c55774808ba2faf890fd820f5">
-    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/42492c2c55774808ba2faf890fd820f5-b78556175c4a316b-full-play.gif">
+    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/42492c2c55774808ba2faf890fd820f5-b78556175c4a316b-full-play.gif"/>
   </a>
 </div>
 
