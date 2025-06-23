@@ -43,13 +43,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<div>
-    <a href="https://www.loom.com/share/42492c2c55774808ba2faf890fd820f5">
-    </a>
-    <a href="https://www.loom.com/share/42492c2c55774808ba2faf890fd820f5">
-      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/42492c2c55774808ba2faf890fd820f5-b78556175c4a316b-full-play.gif">
-    </a>
-  </div>
+[![Watch the walkthrough](https://cdn.loom.com/sessions/thumbnails/42492c2c55774808ba2faf890fd820f5-b78556175c4a316b-full-play.gif)](https://www.loom.com/share/42492c2c55774808ba2faf890fd820f5)
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with Loom  
