@@ -10,6 +10,8 @@ const App = () => {
   const [correct_guess, setCorrectGuess] = useState("")
   const [left_bound, setLeftBound] = useState("out");
   const [right_bound, setRightBound] = useState("in");
+  const [curr_streak, setCurrStreak] = useState(0);
+  const [max_streak, setMaxStreak] = useState(0);
 
   const updateSide = () => {
     if (side == 0) {
@@ -34,6 +36,7 @@ const App = () => {
     setCardSet(shuffled);
     flipSide(0);
     setGuess("");
+    setCorrectGuess("blank");
   }
 
   const nextCard = () => {
@@ -42,6 +45,7 @@ const App = () => {
       flipSide(0);
       setGuess("");
       setLeftBound("in");
+      setCorrectGuess("blank");
     }
     if (index == card_set.length-2) {
       setRightBound("out");
@@ -54,6 +58,7 @@ const App = () => {
       flipSide(0);
       setGuess("");
       setRightBound("in");
+      setCorrectGuess("blank");
     }
     if (index == 1) {
       setLeftBound("out");
@@ -63,8 +68,14 @@ const App = () => {
   const onCheckAnswer = () => {
     if (card_set[index][1].toLowerCase() == guess.toLowerCase()) {
       setCorrectGuess('correct');
+      const newStreak = curr_streak + 1;
+      setCurrStreak(newStreak);
+      if (newStreak > max_streak) {
+        setMaxStreak(newStreak);
+      }
     } else {
       setCorrectGuess('wrong');
+      setCurrStreak(0);
     }
   }
 
@@ -75,6 +86,7 @@ const App = () => {
         <h1>Pasta or Composer?</h1>
         <h3>How well do you know your pastas and composers?</h3>
         <h3>Number of cards: 20</h3>
+        <h3>Current Streak: {curr_streak}, Longest Streak: {max_streak}</h3>
       </div>
       <div className="container">
         <div className={`card ${side === 1 ? 'flipped' : ''}`} onClick={updateSide}>
@@ -88,7 +100,7 @@ const App = () => {
           </div>
         </div>
       </div>
-      <div className="footer">
+      <div className="guess-row">
         <h3>Guess the answer here: </h3>
         <form onSubmit={onCheckAnswer}>
           <input
@@ -100,6 +112,8 @@ const App = () => {
           />
         </form>
         <button className='button' onClick={onCheckAnswer}>Submit Guess</button>
+      </div>
+      <div className="footer">
         <button className={left_bound} onClick={prevCard}>&larr;</button>
         <button className={right_bound} onClick={nextCard}>&rarr;</button>
         <button className='button' onClick={shuffle}>Shuffle</button>

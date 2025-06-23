@@ -16,7 +16,7 @@ body, html {
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(to bottom right, #fdf6e3, #fceabb, #f8d9b0);  color: #333;
-  height: 100%;
+  min-height: 100vh;
   line-height: 1.6;
   font-size: 1.1rem;
 }
@@ -94,7 +94,7 @@ body, html {
   background-color: #2e86ab;
   color: white;
   border: none;
-  padding: 12px 24px;
+  padding: 10px 24px;
   font-size: 1.2rem;
   border-radius: 8px;
   cursor: pointer;
@@ -108,7 +108,7 @@ body, html {
 
 .out {
   border: none;
-  padding: 12px 24px;
+  padding: 10px 24px;
   font-size: 1.2rem;
   border-radius: 8px;
   cursor: pointer;
@@ -116,14 +116,39 @@ body, html {
 }
 
 input {
-  margin-bottom: 30px;
-  padding: 5px 10px;
+  margin: 0;
+  padding: 5px 15px;
+  min-width: 200px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  border: 1px solid black;
 }
 
 .wrong {
-  border: 5px solid red;
+  border: 3px solid red;
 }
 
 .correct {
-  border: 5px solid green;
+  border: 3px solid green;
+}
+
+.blank {
+  border: 1px solid black;
+}
+
+.guess-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem; 
+  margin-bottom: 30px;
+  flex-wrap: wrap; 
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 30px;
 }
