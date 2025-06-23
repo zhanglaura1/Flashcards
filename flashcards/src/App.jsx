@@ -23,7 +23,7 @@ const App = () => {
 
   const shuffle = () => {
     const shuffled = [...card_set];
-    let currentIndex = card_set.length-1;
+    let currentIndex = card_set.length;
     // While there remain elements to shuffle...
     while (currentIndex != 0) {
       // Pick a remaining element...
