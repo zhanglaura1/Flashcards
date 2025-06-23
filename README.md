@@ -43,23 +43,9 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/42492c2c55774808ba2faf890fd820f5?sid=dd84bb42-72ff-42eb-ae5a-13e82e1c232d" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<img src='./flashcards/src/assets/walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-<div>
-    <a href="https://www.loom.com/share/42492c2c55774808ba2faf890fd820f5">
-      <p>Vite + React - 23 June 2025 - Watch Video</p>
-    </a>
-    <a href="https://www.loom.com/share/42492c2c55774808ba2faf890fd820f5">
-      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/42492c2c55774808ba2faf890fd820f5-b78556175c4a316b-full-play.gif">
-    </a>
-  </div>
-
-<!-- Replace this with whatever GIF tool you used! -->
-GIF created with Loom  
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
-[ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
+GIF created with screen record
 
 ## Notes
 
